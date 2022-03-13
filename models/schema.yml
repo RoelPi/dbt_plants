@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: opens_per_contact
+    description: Counts the number of opened emails per CIO.
+    columns:
+    - name: contact_id
+      description: Primary key.
+      tests:
+        - unique
+        - not_null
+    - name: first_name
+      description: The first name of the contact.
+    - name: last_name
+      description: The last name of the contact.
+    - name: email_address
+      description: The email address of the contact.
+      tests:
+      - not_null
+    - name: n_emails
+      description: The number of emails opened by the contact.
